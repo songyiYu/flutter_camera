@@ -4,12 +4,16 @@ import android.Manifest;
 import android.Manifest.permission;
 import android.app.Activity;
 import android.content.pm.PackageManager;
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
 import androidx.annotation.VisibleForTesting;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import io.flutter.plugin.common.PluginRegistry;
 import io.flutter.plugin.common.PluginRegistry.RequestPermissionsResultListener;
 
+@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 final class CameraPermissions {
   interface PermissionsRegistry {
     void addListener(RequestPermissionsResultListener handler);

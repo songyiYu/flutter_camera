@@ -2,8 +2,12 @@ package io.flutter.plugins.camera;
 
 import android.app.Activity;
 import android.hardware.camera2.CameraAccessException;
+import android.os.Build;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+
 import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodCall;
@@ -12,6 +16,7 @@ import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugins.camera.CameraPermissions.PermissionsRegistry;
 import io.flutter.view.TextureRegistry;
 
+@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
   private final Activity activity;
   private final BinaryMessenger messenger;

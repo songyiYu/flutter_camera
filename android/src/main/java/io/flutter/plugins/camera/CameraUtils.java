@@ -9,7 +9,11 @@ import android.hardware.camera2.CameraManager;
 import android.hardware.camera2.CameraMetadata;
 import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.CamcorderProfile;
+import android.os.Build;
 import android.util.Size;
+
+import androidx.annotation.RequiresApi;
+
 import io.flutter.plugins.camera.Camera.ResolutionPreset;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,6 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 /** Provides various utilities for camera. */
+@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 public final class CameraUtils {
 
   private CameraUtils() {}

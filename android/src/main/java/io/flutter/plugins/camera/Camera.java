@@ -26,6 +26,8 @@ import android.util.Size;
 import android.view.OrientationEventListener;
 import android.view.Surface;
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.view.TextureRegistry.SurfaceTextureEntry;
@@ -39,6 +41,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 public class Camera {
   private final SurfaceTextureEntry flutterTexture;
   private final CameraManager cameraManager;

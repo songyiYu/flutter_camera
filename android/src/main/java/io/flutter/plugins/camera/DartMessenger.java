@@ -1,12 +1,16 @@
 package io.flutter.plugins.camera;
 
+import android.os.Build;
 import android.text.TextUtils;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+
 import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.EventChannel;
 import java.util.HashMap;
 import java.util.Map;
 
+@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 class DartMessenger {
   @Nullable private EventChannel.EventSink eventSink;
 

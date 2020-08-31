@@ -8,6 +8,8 @@ import android.app.Activity;
 import android.os.Build;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
@@ -25,6 +27,7 @@ import io.flutter.view.TextureRegistry;
  * <p>Call {@link #registerWith(Registrar)} to register an implementation of this that uses the
  * stable {@code io.flutter.plugin.common} package.
  */
+@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 public final class CameraPlugin implements FlutterPlugin, ActivityAware {
 
   private static final String TAG = "CameraPlugin";
